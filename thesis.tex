@@ -70,6 +70,15 @@ Olli Hämäläinen, Senior Lecturer
 \usepackage{verbatim}
 %for "easier" references
 \usepackage{varioref}
+\makeatletter
+\vref@addto\extrasenglish{%
+  \def\reftextfaceafter{}
+  \def\reftextfacebefore{}
+  \def\reftextafter{}
+  \def\reftextbefore{}
+  \def\reftextcurrent{}
+}
+\makeatother
 %forcing single line spacing in bibliography
 \DisemulatePackage{setspace}
 \usepackage{setspace}
@@ -783,21 +792,21 @@ Integrating a speech technology to a software has been difficult due to the fact
 Some of the institutions which are conducting research in speech technologies are shown in Table 3.
 
 \section{Emerging markets in mobile speech}
-There is a growing diverse market for mobile speech technologies. Mainly these new markets include Warehouse operations, offender monitoring and robotics. With the emergence of Siri, recent focus has been on personal assistants for smart phones. This has led the creation of competitors to Siri such as Nina (Nuance communication), Lola (SRI international), Lexee (Angel labs) and Watson for smart phones(IBM). \cite{markowitz}
+There is a growing diverse market for mobile speech technologies. Mainly these new markets include Warehouse operations, offender monitoring and robotics. With the emergence of Siri, the recent focus has been on personal assistants for smart phones. This has led the creation of competitors to Siri such as Nina (Nuance communication), Lola (SRI international), Lexee (Angel labs) and Watson for smart phones(IBM). \cite{markowitz}
 
-"Eyes busy", "hands busy" environments in factories and warehouses were among the earliest markets for mobile speech. These include manufacturing inspection, sorting, order picking, return processing etc. A workers eyes and hands need to be focused on the tasks to safely perform the tasks so that errors and accidents do not occur. \\ Starting from the 1980s these eyes-busy tasks were well suited to speech technologies. The alternatives like pausing tasks to write findings on data-sheet is error prone or even using additional data-clerks to write using for example a laptop is costly. Since factory users do repetitive tasks every day the vocabularies for speech technologies could be limited and users could train their own voices. For example figure \vref{fig:orderpicking} provides an example of spoken dialog interaction of a factory worker with a system. In these factory environments the main challenge has been noise. For this, speech technology companies have for example used noise canceling microphones and sometimes embedded the mic into hard-hats or protective ear-ware.\cite{markowitz}
+"Eyes busy", "hands busy" environments in factories and warehouses were among the earliest markets for mobile speech. These include for example, manufacturing inspection, sorting, order picking and return processing. A workers eyes and hands need to be focused on the tasks to safely perform the tasks so that errors and accidents will not occur. 
+
+Starting from the 1980s these eyes-busy tasks have been well suited to speech technologies. The alternatives like pausing tasks to write findings on data-sheet are error-prone or even using additional data-clerks to write using for example a laptop is costly. Since factory users do repetitive tasks every day the vocabularies for speech technologies could be limited and users could train their own voices. For example Figure \vref{fig:orderpicking} provides an example of the spoken dialog interaction of a factory worker with a system. In these factory environments the main challenge has been noise. For this, speech technology companies have for example used noise canceling microphones and sometimes embedded the microphone into hard-hats or protective ear-ware. \cite{markowitz}
 
 \begin{figure}[h]
   \includegraphics[width=15cm]{orderpicking}
-  \caption{Order picking. Example drived from demo video produced by Voxware (copied from \cite{markowitz})}
+  \caption{Order picking. Example driven from a demo video produced by Voxware. Copied from \cite{markowitz}}
   \label{fig:orderpicking}
 \end{figure}
 
+Correction facilities are among the largest market for speaker verification. The main reason for using this technology is the increase in alternative sentencing for non-violent offenders. Heavy caseloads made it increasingly difficult for officers to monitor offenders effectively. \cite{markowitz}
 
-
-Correction facilities ware among the largest market for speaker verification. The main reason for using this technology is the increase in alternative sentencing for non violent offenders. Heavy caseloads made it increasingly difficult for officers to monitor offenders effectively.\cite{markowitz}
-
-Despite the extreme capabilities of robots in speech in various science fiction, there exist few actual robots that utilize speech. There exist two categories: robots which are able to respond to pre-defined speech and those who can learn and use language (autonomous robots). There exist toys which can accept commands via voice and respond either in action or using speech synthesis. Additionally there are worker robots developed for special needs people. For example hospital bed controlled by voice. \cite{markowitz}
+Despite the extreme capabilities of robots in speech in science fiction, there exist few actual robots that utilize speech. There exist two categories: robots which are able to respond to pre-defined speech and those who can learn and use language (autonomous robots). Moreover, there exist toys which can accept commands via voice and respond either in action or using speech synthesis. Additionally there are worker robots developed for special needs people, for example hospital beds controlled by voice. \cite{markowitz}
 
 \clearpage
 \chapter{Implementation}
