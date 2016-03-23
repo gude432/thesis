@@ -2,7 +2,7 @@
 \def\thesislang{english} %change this depending on your language
 \author{Gudeta Gebremariam}
 \def\thesis{Thesis}
-\def\alaotsikko{}
+\def\alaotsikko{Developing web application that implements speech technology}
 
 %Finnish section
 \def\otsikko{Opinnäytetyön otsikko}
@@ -811,7 +811,7 @@ Despite the extreme capabilities of robots in speech in science fiction, there e
 \clearpage
 \chapter{Implementation}
 
-Many speech technology companies provide TTS solutions. From these there exist a number of natural sounding Finnish text-to-speech systems. Designing a new text-to-speech system from scratch is beyond the scope of this thesis. However some existing text-to-speech systems will be used in an experement to build a web based application  intended in assisting language learning. The main features of this application will be synthesizing user text into speech and using speech recognition for pronunciation practice. Text-to-speech engines will be installed on a server and the client side app communicates with the server using HTTP GET method. Overall the implementation plan is such that a user entered text is sent to the server first. Then after a speech is synthesized on the server the resulting audio is sent back to the client side.  Figure \vref{fig:clientserver} illustrates the client and server architecture.
+Many speech technology companies provide TTS solutions, including a number of natural sounding Finnish text-to-speech systems. Designing a new text-to-speech system from scratch is beyond the scope of this thesis. However some existing text-to-speech systems will be used in an experiment to build a web-based application intended to assist language learning. The main features of this application are synthesizing user text into speech and using speech recognition for pronunciation practice. Text-to-speech engines will be installed on a server and the client side application communicates with the server using the HTTP GET method. 
 
 \begin{figure}[h]
   \includegraphics[width=12cm]{clientserver}
@@ -819,21 +819,24 @@ Many speech technology companies provide TTS solutions. From these there exist a
   \label{fig:clientserver}
 \end{figure}
 
+Overall the implementation plan is such that a user-entered text is sent to the server first. Then after the speech is synthesized on the server, the resulting audio will be sent back to the client side. Figure \vref{fig:clientserver} illustrates the client and server architecture.
 
 \section{Setting up a Linux text-to-speech server }
-In order to have a web interface to the speech engines installed, a server environment is set up. The server for this demo was Ubuntu 14.04 LTS and it was installed as a guest system into a virtual machine. A complete LAMP (Linux Apache MySQL and PHP) stack was installed in the server environment. On the server side PHP script accepts user text from browser and returns synthesized audio. On the other hand Jquery and Javascript were used for the client side web application. 
+In order to have a web interface to the speech engines installed, a server environment was set up. The server for this demo was Ubuntu 14.04 LTS and it was installed as a guest system into a virtual machine. A complete LAMP (Linux Apache MySQL and PHP) stack was installed in the server environment. On the server side a PHP script accepted user text from the browser and returned synthesized audio. On the other hand Jquery and Javascript were used for the client side web application. 
 
-Espeak and Festival text-to-speech systems were selected for the experement. Espeak supports various languages including Finnish. It can be easily installed to a Linux system from Linux repositories. Similarly Festival is found in the Ubuntu  package repositories. However Finnish voices for festival are not pre-installed along with festival and have to be downloaded separately. Finnish Festival voices have been developed in the University of Helsinki as part of Suopuhe project and are available in Ubuntu and Debian repositories. 
+Espeak and Festival text-to-speech systems were selected for the experement. Espeak supports various languages including Finnish. It can be easily installed into a Linux system from Linux repositories. Similarly Festival is found in the Ubuntu  package repositories. However Finnish voices for Festival are not pre-installed along with Festival and have to be downloaded separately. Finnish Festival voices have been developed at the University of Helsinki as part of the Suopuhe project and are available in Ubuntu and Debian repositories. 
 
 
 \subsection{Espeak}
 
-Espeak is an open source software and is available for Linux, Windows and MacOSX operating systems. Additionally there exists an Espeak port to the android platform. 
+Espeak is open-source software and is available for Linux, Windows and MacOSX operating systems. Additionally there exists an Espeak port to the Android platform. 
 
-Espeak is a formant type rule based speech synthesizer. A text to be synthesized is first converted into phoneme. Phoneme is the smallest linguistic unit. There exist different set of phonemes for different languages. For example English has 41 phonemes as defined by International Phonetic Association (IPA). Espeak uses some rules to convert a text to the phonemes and allophones (variation of phoneme). Hence the program has smaller memory consumption when compared with dictionary based speech synthesis systems.
+Espeak is a formant type rule based speech synthesizer. A text to be synthesized is first converted into a phoneme. A phoneme is the smallest linguistic unit. There exist different sets of phonemes for different languages. For example English has 41 phonemes as defined by the International Phonetic Association (IPA). Espeak uses some rules to convert a text into  phonemes and allophones (a variation of phoneme). Hence the program has smaller memory consumption when compared with dictionary-based speech synthesis systems.
 
 
-Below is a list of some command-line parameters of Espeak. For a simple text synthesis the following is used\\
+Below is a list of some command-line parameters of Espeak. For a simple text synthesis the following parameters are used:
+
+\setlength{\leftskip}{1cm}
 \textbf{espeak} "this is a test" or \textbf{espeak} -f <text file>\\
 %or\\
 %\textbf{espeak} followed by return then writing text and pressing enter\\
@@ -843,13 +846,15 @@ Some basic options for synthesis include:\\
 \textbf{-w <wave file>}\\
 writes the speech output to a file in a WAV format instead of speaking it aloud.\\ 
 \textbf{-v <voice filename>[+<variant>]}\\
-sets voice for the speech, usually to select a language. For example the following command sets a Finnish voice.\\
+sets voice for the speech, usually to select a language. For example the following command sets a Finnish voice:\\
 \textbf{espeak} -vfi\\
-In addition to these female and male voices are synthesized using variable pitch. These include +m1 +m2 . . . +m7 for male voices and +f1 . . . +f4 for female voices.
+In addition to these, female and male voices are synthesized using a variable pitch. These include +m1 +m2 . . . +m7 for male voices and +f1 . . . +f4 for female voices.
+
+\setlength{\leftskip}{0pt}
 
 Additionally Espeak has parameters to control the synthesized voice's speed, pitch and amplitude.
 
-Espeak allows users to add or improve additional languages. This consists of defining phoneme table for a language, spelling to phoneme translation rules and adding a file for pronunciation of symbols, numbers and abbreviations. Espeakedit is a program used prepare phonemedata and compile voices for espeak. A screenshot of espeakedit is shown in figure \vref{fig:espeakedit}
+Espeak allows users to add or improve additional languages. This consists of defining a phoneme table for a language, spelling to phoneme translation rules and adding a file for pronunciation of symbols, numbers and abbreviations. Espeakedit is a program used to prepare phoneme data and compile voices for Espeak. A screen-shot of Espeakedit is shown in figure \vref{fig:espeakedit}
 
 \begin{figure}[h]
   \includegraphics[width=15cm]{espeakedit}
@@ -858,22 +863,20 @@ Espeak allows users to add or improve additional languages. This consists of def
 \end{figure}
 
 \subsection{Festival}
-Festival is a multilingual text-to-speech system developed originally by Alan W. Black at University of Edinburgh. Festival works in two modes. Command mode and text-to-speech mode. When in command mode input (from file or interactively ) is interpreted by the command interpreter. When in text-to-speech mode, input is treated as text to be rendered as speech.
-Festival's basic calling method is like:\\
+Festival is a multilingual text-to-speech system developed originally by Alan W. Black at the  University of Edinburgh. \cite{hut} Festival works in two modes, a command mode and text-to-speech mode. When in the command mode, the input (from a file or interactively ) is interpreted by the command interpreter. When in the text-to-speech mode, the input is treated as text to be rendered as speech.
+Festival's basic calling method is as follows:\\
 \textbf{festival [options] file1 file2 ....}\\
-In command driven mode festival is started with no arguments.
-some useful command line options of festival are the following:\\
+In the command driven mode Festival is started with no arguments. Some useful command line options of Festival are the following:\\
+
 \textbf{--tts}\\
 synthesize text in files as speech, if no file is given from standard input (stdin)\\
 \textbf{--language} <string>\\
 Run in named language
 
-After eSpeak and Festival have been installed on the server, a small demo web application that uses these two engines is implemented. 
-
-
+After Espeak and Festival have been installed on the server, a small demo web application that uses these two engines was implemented. 
 
 \subsection{Server side scripts}
-On the server side PHP scripts are used to call the command line parameters of Espeak and Festival. These scripts accept a text as a GET parameter and pass it to either Espeak or Festival command line applications. Then the scripts return an audio from the synthesized voice in MP3 format. Sample server side code is shown in the listing below. Note here that \textbf{text2wave} comes along with festival installation and converts text to an audio in WAV format.
+On the server side PHP scripts are used to call the command line parameters of Espeak and Festival. These scripts accept a text as a GET parameter and pass it to either Espeak or Festival command line applications. Then the scripts return an audio from the synthesized voice in MP3 format. The sample server side code is shown in listing 2. Note here that \textbf{text2wave} comes along with festival installation and converts text into an audio in WAV format.
 
 \lstset{language=php}
 \begin{minipage}{\linewidth}
