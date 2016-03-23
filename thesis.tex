@@ -404,7 +404,7 @@ HTK & Hidden Markov Toolkit\\
 HTTP & Hyper Text Transfer Protocol \\
 LAMP & Linux, Apache, MySQL and PHP \\
 SSML & Speech Synthesis Markup Language\\
-TTS & Text To Speech\\
+TTS & text-to-speech\\
 W3C & World Wide Web Consortium \\
 
 \end{tabular}
@@ -449,7 +449,7 @@ Figure \vref{fig:human} shows the human articulatory system. Consonant sounds ar
 \end{figure}
 
 \newpage
-\textbf{Speech synthesis} is the artificial production of human speech using a computer, either hardware or software. A text-to-speech synthesis system is a system that converts written text to speech. There are two main steps in text-to-speech-synthesis. These are known as text analysis and speech waveform generation. In the text analysis phase, an input text is converted into phonetic or other linguistic format. In the second step an audio output is formed. Figure \vref{fig:tts} shows this operation. [2,2].
+\textbf{Speech synthesis} is the artificial production of human speech using a computer, either hardware or software. A text-to-speech synthesis system is a system that converts written text-to-speech. There are two main steps in text-to-speech-synthesis. These are known as text analysis and speech waveform generation. In the text analysis phase, an input text is converted into phonetic or other linguistic format. In the second step an audio output is formed. Figure \vref{fig:tts} shows this operation. [2,2].
 
 \begin{figure}[h]
   \includegraphics[width=15cm]{tts}
@@ -502,50 +502,50 @@ The Source-filter-model of speech is used as a basis for formant synthesis. The 
 ESpeak is an open-source software implementation of a formant type synthesizer. It can use either its own espeak engine or Klatt. Voiced speech sounds such as vowels and sonorant consonants are created by adding together sine waves to make the formant peaks. Unvoiced consonants are made by playing recorded sounds. Voiced consonants are made by mixing a synthesized voice with a recorded unvoiced sound. Klatt uses the same formant data but produces voiced sounds by starting with a waveform and applying digital filters. \cite{espeak}
 
 %development process: concatenative
-The Unit selection method uses a large recorded speech data sufficient to cover a language features and then speech is produced by cutting and stitching units from a database\cite{chala}. Concatenation method depends mainly on runtime selection and compilation of speech units from database. For example, according to Acapela Group speech synthesis process for the word \textbf{impressive} is made up from chunks from the words "\emph{imp}ossible", "\emph{presi}dent" and "detect\emph{ive}" which results in a natural sounding word.
+The Unit selection method uses large recorded speech data sufficient to cover language features and then speech is produced by cutting and stitching units from a database \cite{chala}. The concatenation method depends mainly on runtime selection and compilation of speech units from the database. For example, according to Acapela Group speech synthesis process for the word \textbf{impressive} is made up from chunks from the words "\emph{imp}ossible", "\emph{presi}dent" and "detect\emph{ive}", which results in a natural sounding word.
 %comparison of the the systems
-According to Silen et al., Speech synthesis based on unit selection can produce more natural sounding voice than other methods\cite[1]{silen} 
-On the contrary to concatenative systems, formant based synthesis does not initially use a recorded human voice and as a result the output sound is more robot-sounding. However the main advantage of these systems is the smaller footprint of the programs due to lack of large database. Additionally the output voice does not suffer from glitches and a faster output could be produced.\cite{allen}
+According to Silen et al. (2007), speech synthesis based on unit selection can produce more natural sounding voice than other methods \cite[1]{silen} 
+Contrary to concatenative systems, formant-based synthesis does not initially use a recorded human voice and as a result the output sound is more robot-sounding. However the main advantage of these systems is a smaller footprint of the programs due to lack of a large database. Additionally the output voice does not suffer from glitches and a faster output could be produced. \cite{allen}
 
 
 %case study finnish
-A development of unit selection speech synthesizer developed for Finnish language in Tampere University of Technology illustrates the process of unit selection concatenative synthesizer. This method uses large pre-recorded speech inventory so that sufficient phonetic and prosodic coverage for a language is provided. As the name indicates units are cut and concatenated from a database to produce speech. Unit selection from database is guided by two costs, \emph{target} and \emph{join cost}.  The former measures similarity of candidate and desired units. On the other hand, the later measures the concatenation quality of two consecutive units. The design of database is important and should consider the target language because the quality of synthesized speech highly depends on coverage of the database.
+A development of a unit selection speech synthesizer developed for the Finnish language at the Tampere University of Technology (TUT) illustrates the process of the unit selection concatenative synthesizer. This method uses a large pre-recorded speech inventory so that a sufficient phonetic and prosodic coverage for a language is provided. As the name indicates, units are cut and concatenated from a database to produce speech. Unit selection from the database is guided by two costs, \emph{target} and \emph{join cost}.  The former measures the similarity of the candidate and desired units. On the other hand, the latter measures the concatenation quality of two consecutive units. The design of the database is important and should consider the target language because the quality of synthesized speech highly depends on the coverage of the database. \cite{silen}
 
-To design a unit selection speech synthesizer, first and foremost understanding of target language is important even-though a unit selection synthesizer could be built with no or little knowledge of the target language\cite{silen}. Hence the authors, who developed unit selection Finnish speech synthesizer at TUT, studied the phoneme and orthography of the Finnish language and what makes it similar and different from other languages. Secondly a database was designed to store phonemes from a recorded speech units. Next, a synthesis engine was implemented and tested. 
+To design a unit selection speech synthesizer, first and foremost, understanding of the target language is important even though a unit selection synthesizer could be built with no or little knowledge of the target language \cite{silen}. Hence the authors, who developed the unit selection Finnish speech synthesizer at TUT, studied the phoneme and orthography of the Finnish language and what makes it similar to and different from other languages. Secondly a database was designed to store phonemes from a recorded speech units. Next, a synthesis engine was implemented and tested. \cite{silen}
 
-A good example that implements diphone based synthesis is MBROLA project. A diphone is an adjacent pair of phones. Building new voices for MBROLA is efficient using diphone and sentence extraction tools. Diphone database is diphone synthesizer and it has to include all possible diphones in the language it is designed for. The general procedure of MBROLA voice creation is as follows:
+A good example that implements diphone-based synthesis is the MBROLA project. A diphone is an adjacent pair of phones. Building new voices for MBROLA is efficient using diphone and sentence extraction tools. A Diphone database is a diphone synthesizer and it has to include all possible diphones in the language it is designed for. The general procedure of MBROLA voice creation is as follows. \cite{jolanta}
 
-The first step is \textbf{creating text corpus}. Here list of phones including allphones for a given language is prepared followed by a list of diphones. Then
-a list of words containing all the diphones is created and each diphone should appear at least once. This is followed by putting a keywords in a career sentence. Next step is \textbf{recording the corpus}; The corpus is read by a professional speaker with monotonous intonation and  the speech is digitally recorded and stored in a digital format. After this the \textbf{corpus is segmented}. Here the diphones must be found and annotated and then position of the border between the phones is marked. Finally \textbf{leveling} is done. Here the energy levels at the beginning and end of a segment are averaged and pitch is normalized. After these steps diphone files are saved in a WAV format along with the diphone database file. \cite{jolanta}
+The first step is \textbf{creating a text corpus}. Here a list of the phones including allphones for a given language is prepared followed by a list of diphones. Then
+a list of words containing all the diphones is created and each diphone should appear at least once. This is followed by putting keywords in a career sentence. The next step is \textbf{recording the corpus}. The corpus is read by a professional speaker with monotonous intonation and  the speech is digitally recorded and stored in a digital format. After this the \textbf{corpus is segmented}. Here the diphones must be found and annotated and then the position of the border between the phones is marked. Finally \textbf{leveling} is done. Here the energy levels at the beginning and end of a segment are averaged and the pitch is normalized. After these steps diphone files are saved in a WAV format along with the diphone database file. \cite{jolanta}
 
-\section{Computer assisted language learning (CALL)}
-According to Philip Hubbard, Computer assisted language learning is defined as any process in which a learner uses a computer and as a result improves his or her language. It is a broad and dynamic field of study. Here, by computer it means in its broadest sense, including networks and other portable devices. By improving it means from various perspectives such as learning effectiveness, access to various learning materials, convenience across a wide range of time and place, motivational aspects and less or fewer expensive resource requirements.\cite{hubbard}
+\section{Computer-assisted language learning (CALL)}
+According to Philip Hubbard, computer-assisted language learning is defined as any process in which a learner uses a computer and as a result improves his or her language. It is a broad and dynamic field of study. Here, by computer it means in its broadest sense, including networks and other portable devices. By improving it means from various perspectives such as learning effectiveness, access to various learning materials, convenience across a wide range of time and place, motivational aspects and less or fewer expensive resource requirements. \cite{hubbard}
 
-With regards to learning skills such as listening, speaking and pronunciation, computers and networks have evolved that large amount of information is readily available. These days listeners have access to a wealth of audio and video materials to listen from usually for free. In the future of language learning, the primary question will be how users choose materials that match their learning styles rather than which programs offer what kind of features. Speaking exercises could be accomplished via user taking to each other through an IT medium or users recording their sounds and playing it back. Automatic speech recognition systems could also be utilized. Pronunciation learning could be applied where by students trying to match their pronunciation relative to the one produced by a native speaker. Graphic representations of speech as a waveform, for example, could help for comparing the sounds produced by a student to a native speaker.\cite{hubbard}
+With regard to learning skills such as listening, speaking and pronunciation, computers and networks have evolved so that a large amount of information is readily available. These days listeners have access to a wealth of audio and video materials to listen to usually for free. In the future of language learning, the primary question will be how users choose materials that match their learning styles rather than which programs offer what kind of features. Speaking exercises could be accomplished via a user talking to each other through an IT medium or users recording their sounds and playing them back. Automatic speech recognition systems could also be utilized. Pronunciation learning could be implemented where students could try to match their pronunciation relative to the one produced by a native speaker. Graphic representations of speech as a waveform, for example, could help to compare the sounds produced by a student to a native speaker. \cite{hubbard}
 
-Computer programs could assist reading and writing in multiple ways. In addition to the availability of multiple print materials in an accessible way, collaborative writing methods such as Google Docs have provided a way to write and share at the same time. Spelling, grammar and thesaurus checkers and on-line dictionaries also fit in the context of reading and writing with CALL.\cite{hubbard}
+Computer programs could assist reading and writing in multiple ways. In addition to the availability of multiple print materials in an accessible way, collaborative writing methods such as Google Docs have provided a way to write and share at the same time. Spelling, grammar and thesaurus checkers and on-line dictionaries also fit into the context of reading and writing with CALL. \cite{hubbard}
 
 \section{Language learning and technology}
 %how to reference informal materials???
-Vast amount of materials is accessible on-line for various languages. Informal form of learning could take many kinds of approaches. As an example gaming and other fun ways of on-line collaboration is one form of an informal learning. Additionally, Peer to peer networks on various subjects, on-line dictionaries including translation services can be used by learners in developing their skills. For developing skills in vocabulary, there are programs like Quizlet and other flash card apps. Furthermore, for a longer term vocabulary retention, there exist advanced algorithms that help students to maintain optimal rhythm through time. Pod-casts and various video materials help in advancing listening comprehension. 
+A vast amount of materials is accessible on-line for learning various languages. An informal form of learning could take many kinds of approaches. As an example, gaming and other fun ways of on-line collaboration are one form of  informal learning. Additionally, peer to peer networks on various subjects and on-line dictionaries including translation services can be used by learners in developing their skills. For developing skills in vocabulary, there are programs like Quizlet and other flash card applications. Furthermore, for a longer term vocabulary retention, there exist advanced algorithms that help students to maintain an optimal rhythm through time. Pod-casts and various video materials help in advancing listening comprehension. 
 
 While the amount of information for an independent learner could be overwhelming, one can personalize his/her individual experience. There is a great potential in using personalized on-line resources. Mobile phones have brought high level of personalization in that they can be used in and out of class and information could be looked up with out restriction of place.
 
 \section{Finnish phonetics and phonology}
-While studying about speech technologies, it is important to know the characteristics of a target language. A phoneme is the smallest unit of speech that can be used to make one word different from another word. Phonemes are divided into consonants and vowels. In Finnish language there exist eight vowels. These are  /ɑ/, /e/, /i/, /o/, /u/, /y/, /æ/ and /ø/. Vowels can occur in both short and long form and sequences and diphthongs, which are adjacent vowel sounds occurring within the same syllable.\cite{silen} Figure\vref{fig:vowels} summarizes categorization of Finnish vowels.
-Finnish orthography is phonemic: each phoneme corresponds to a certain grapheme (smallest unit in a writing system). One or more syllables exist in every word. Each syllable in Finnish has a vowel as a sonant, which means that every word has at least a vowel. 
+While studying speech technologies, it is important to know the characteristics of the target language. A phoneme is the smallest unit of speech that can be used to make one word different from another word. Phonemes are divided into consonants and vowels. In the Finnish language there exist eight vowels. These are  /ɑ/, /e/, /i/, /o/, /u/, /y/, /æ/ and /ø/. Vowels can occur in both a short and long form and sequences and diphthongs, which are adjacent vowel sounds occurring within the same syllable. \cite{silen} Figure\vref{fig:vowels} summarizes the categorization of Finnish vowels.
+The Finnish orthography is phonemic: each phoneme corresponds to a certain grapheme (the smallest unit in a writing system). One or more syllables exist in every word. Each syllable in Finnish has a vowel as a sonant, which means that every word has at least a one vowel. \cite{silen}                                            
 
 \begin{figure}[h]
   \includegraphics[width=12cm]{vowels}
-  \caption{Classification of Finnish vowels. (Copied from \cite{hut}).}
+  \caption{Classification of Finnish vowels. Copied from \cite{hut}.}
   \label{fig:vowels}
 \end{figure}
 
-Depending upon the place of articulation consonants in Finnish are classified as plosives (vocal tract is closed causing stop), fricatives (vocal tract is tightened over some spot that the turbulent air creates sound), nasals (vocal tract is closed however velum opens a course to nasal cavity), tremulants (top of the tongue is vibrating), laternals (the top part of the tongue shuts the vocal tract) and semivowels (almost like vowel but unstable). Figure \vref{fig:consonants} summarizes Finnish consonants.\cite{hut}
+Depending upon the place of articulation consonants in Finnish are classified as plosives (the vocal tract is closed causing a stop), fricatives (the vocal tract is tightened over some spot that the turbulent air creates sound), nasals (the vocal tract is closed; however the velum opens a course to the nasal cavity), tremulants (the top of the tongue is vibrating), laternals (the top part of the tongue shuts the vocal tract) and semivowels (almost like vowels but unstable). Figure 5 summarizes the Finnish consonants. \cite{hut}
 
 \begin{figure}[h]
   \includegraphics[width=14cm]{consonants}
-  \caption{Classification of Finnish consonants. (Copied from \cite{hut}).}
+  \caption{Classification of Finnish consonants. Copied from \cite{hut}.}
   \label{fig:consonants}
 \end{figure}
 
@@ -555,36 +555,37 @@ Depending upon the place of articulation consonants in Finnish are classified as
 %  \label{fig:finnish}
 %\end{figure}
 
+
 \section{Natural language processing}
+Natural language processing (NLP) is a field of computer science, artificial intelligence and computational linguistics concerned with the interactions between computers and human languages. The main challenges of the field include natural language understanding and natural language generation.
 
-Natural language processing (NLP) is a field of computer science, artificial intelligence and computational linguistics concerned with the interactions between computers and human languages. Main challenges of the field include natural language understanding and natural language generation.
+Natural language processing in the context of speech synthesis comprises various elements. Figure 7 illustrates the role of natural language processing in a unit selection TTS system. As shown in the figure, when a given text is fed into the parsing and structural analysis module, the text boundaries are identified. These identified sentences are then fed into normalization module. Here numbers, addresses, acronyms and other special tokens are identified and expanded and converted into spoken forms.  Figure 6 shows basic text processing. The text processing phase includes text-to-phoneme conversion, which is undertaken based on syllable-to-phoneme conversion rules. \cite{chala}
 
-Natural language processing in the context of speech synthesis comprises of various elements. Figure \vref{fig:nlp} illustrates the role of natural language processing in a unit selection TTS system. As shown in the figure, when a given text is fed into parsing and structural analysis module, text boundaries are identified. These identified sentences are then fed to normalization module. Here numbers, addresses, acronyms and other special tokens are identified and expanded and converted to spoken forms.  Figure \vref{fig:rawtext} shows basic text processing. Text processing phase includes text to phoneme conversion, which is undertaken based on syllable to phoneme conversion rules.
 
 \begin{figure}[h]
   \includegraphics[width=12cm]{rawtext}
   \caption{Raw text processing.}
   \label{fig:rawtext}
 \end{figure}
- The normalization module depends on lexicons and rule based approaches. Prosody module determines pitch contour, duration and intensity of the text to be synthesized. In general the NLP module is responsible for parsing, analyzing and transforming the input text to an intermediate symbolic format suitable to be processed using the DSP (Digital Signal Processing) module. \cite{chala}.
+The normalization module depends on lexicons and rule-based approaches. The prosody module determines the pitch contour, duration and intensity of the text to be synthesized. In general the NLP module is responsible for parsing, analyzing and transforming the input text into an intermediate symbolic format suitable to be processed using the DSP (Digital Signal Processing) module. \cite{chala}.
 
-Natural language processing systems are widely used in commercial language applications. Apples Siri and Google now use these technologies. Deep neural networks implement large datasets and have great potential for use in language learning.
+Natural language processing systems are widely used in commercial language applications. Apple's Siri and Google now use these technologies. Deep neural networks implement large datasets and have great potential for use in language learning. \cite{markowitz}
 
 \begin{figure}[h]
   \includegraphics[width=12cm]{nlp}
-  \caption{Architecture of unit selection TTS system (Copied from \cite{chala}).}
+  \caption{Architecture of unit selection TTS system. Copied from \cite{chala}.}
   \label{fig:nlp}
 \end{figure}
 
 
 \section{Applications of synthetic speech}
-Many applications could benefit from the use of a synthetic speech. There have been products from talking toys and calculators to personal assistant applications in modern smart-phones that could conduct dialog with the user. In cases like warning and announcement systems, unrestricted vocabulary might not be required and simply recorded units of words and sentences could come to use. However for applications like reading applications for the blind, require a TTS system with unlimited vocabularies.\cite{hut}
+Many applications could benefit from the use of synthetic speech. There have been products from talking toys and calculators to personal assistant applications in modern smart phones that could conduct a dialog with the user. In cases like warning and announcement systems, unrestricted vocabulary might not be required and simply recorded units of words and sentences could come to use. However for applications like reading applications for the blind, require a text-to-speech (TTS) system with unlimited vocabularies. \cite{hut}
 
-Perhaps the most useful application of speech synthesis is to be used as communication aid for the blind. Before the common use speech synthesis, audio books used to be recorded by a professional speaker for use with the blind. This technique is expensive and time consuming. Nowadays, there exist applications that could be used to read aloud information from computer screen.
+Perhaps the most useful application of speech synthesis is to be used as a communication aid for the blind. Before the common use of speech synthesis, audio books used to be recorded by a professional speaker for use with the blind. This technique is expensive and time-consuming. Nowadays, there exist applications that could be used to read aloud information from a computer screen. \cite{hut}
 
-Synthetic speech can provide voice for people who are born-deaf and people who have difficulties in speaking. Subsequently it provides a chance to communicate with people who do not comprehend a sign language. Talking heads could improve the quality of communication since any visual type of information is very important for people who couldn't hear.
+Synthetic speech can provide voice for people who are born-deaf and people who have difficulties in speaking. Subsequently it provides a chance to communicate with people who do not comprehend sign language. Talking heads could improve the quality of communication since any visual type of information is very important for people who cannot hear. \cite{hut}
 
-Other important area of application for synthetic speech is educational situation. For example language learning applications could make use of synthesized speech to teach pronunciation. It could be used to teach people who have impairment for reading (dyslexics).\cite{hut} Additionally synthetic speech could also be used together with spoken dialog systems in personal assistant applications, for proofreading with word processors, to read aloud email and SMS messages etc.
+Another important area of application for synthetic speech is an educational situation. For example language learning applications could make use of synthesized speech to teach pronunciation. It could be used to teach people who have impairment for reading (dyslexics). Additionally synthetic speech could also be used together with spoken dialog systems in personal assistant applications, for proofreading with word processors, to read aloud email and SMS messages etc. \cite{hut}
 
 
 %\section{Conclusion}
@@ -594,7 +595,7 @@ Other important area of application for synthetic speech is educational situatio
 \chapter{Available tools and techniques}
 
 \section{Available speech synthesis products and APIs}
-Many companies offer text to speech APIs to their customers in order to accelerate development of new applications utilizing TTS technology. These companies include AT\&T, IVONA, Neospeech, Readspeaker. In addition to these, major mobile operating systems like Android, IOS and Microsoft Windows offer API for text to speech. 
+Many companies offer text-to-speech APIs to their customers in order to accelerate the development of new applications utilizing TTS technology. These companies include AT\&T, IVONA, Neospeech and Readspeaker. In addition to these, major mobile operating systems like Android, IOS and Microsoft Windows offer API for text-to-speech. 
 
 %Figure \vref{fig:finnish_resources} shows the availability of speech technology resources for the Finnish language. The figure is scaled from 0 to 5 and from the figure one can conclude that speech synthesis technologies are relatively well supported.
 
@@ -606,7 +607,7 @@ Many companies offer text to speech APIs to their customers in order to accelera
 %\end{figure}
 
 
-%The following qualifications were used in the comparison of existing text to speech systems.
+%The following qualifications were used in the comparison of existing text-to-speech systems.
 %\begin{itemize}
 %  \item Support for languages
 %  \item Voice quality (Natural sounding)
@@ -615,39 +616,39 @@ Many companies offer text to speech APIs to their customers in order to accelera
 %  \item Cost
 %\end{itemize}
 
-Available list of speech synthesis products was found using an on-line search. The following tools had been selected for testing, Listed in alphabetical order. Sample voices from these applications has been attached with this document on a CD. 
+A list of available speech synthesis products was found using an on line search. The following tools have been selected for testing, listed in alphabetical order. Sample voices from these applications have been attached with this document on a CD. 
 
 \textbf{Acapela}\\
-Acapela Group is a company which develops text-to-speech software and services. It was formed from a combination of three companies that specialize in voice technology. Babel Technologies (Belgium), Infovox(Sweden) and Elan Speech (France). At the moment, Acapela has natural sounding voices for 25 languages including Finnish and has an API access for the cloud based TTS services. The service could be accessed though HTTP. Pricing is based on voice units.\cite{acapela}
+Acapela Group is a company which develops text-to-speech software and services. It was formed from a combination of three companies that specialize in voice technology. Babel Technologies (Belgium), Infovox(Sweden) and Elan Speech (France). At the moment, Acapela has natural sounding voices for 25 languages including Finnish and has an API access for cloud-based TTS services. The service could be accessed though HTTP. Pricing is based on voice units. \cite{acapela}
 
 \textbf{Espeak}\\
-Espeak is a compact open-source speech synthesizer that supports many languages. It is available for Linux and Windows. Since it uses formant synthesis method, synthesized voice is not natural sounding. Espeak is available as a command line utility or as a dynamic library(DLL). It has also been ported to other systems like android and Mac OSX. \cite{espeak}\\
+Espeak is a compact open-source speech synthesizer that supports many languages. It is available for Linux and Windows. Since it uses a formant synthesis method, the synthesized voice is not natural sounding. Espeak is available as a command line utility or as a dynamic library (DLL). It has also been ported to other systems like Android and Mac OSX. \cite{espeak}\\
 
 \textbf{Festival} \\
-Festival is a framework for building speech synthesis systems and offers full TTS through a number of APIs. It is distributed with unrestricted license for commercial and non-commercial use alike. \cite{festival}
+Festival is a framework for building speech synthesis systems and offers full TTS through a number of APIs. It is distributed with an unrestricted license for commercial and non-commercial use alike. \cite{festival}
 
 \textbf{Google}\\
-Google text to speech system is primarily developed for Android operating system. It powers applications to read aloud the text on the screen. It has support for multiple languages. Google services like Google Translate use the system. The service provides API to developers in android platform. There also exist an unofficial access to the API by using the Google Translate service. Google TTS has been implemented in Chrome web browser to read any text in the browser. 
+The Google text-to-speech system is primarily developed for the Android operating system. It powers applications to read aloud the text on the screen and has support for multiple languages. Google services like Google Translate use the system. The service provides API to developers in the Android platform. There also exist an unofficial access to the API by using the Google Translate service. Google TTS has been implemented in the Chrome web browser to read any text in the browser. 
 
 \textbf{Ispeech}\\
-iSpeech is a TTS service from a California based company which develops speech solutions for various platforms. The cloud services are free to implement in mobile platforms while it costs a small fee for web platform. The service supports about 20 languages and the voice is of human like quality. The company provides an API for developers for testing. \cite{ispeech}
+ISpeech is a TTS service from a California-based company which develops speech solutions for various platforms. The cloud services are free to implement in mobile platforms while it costs a small fee to use a web platform. The service supports about 20 languages and the voice is of human-like quality. The company provides an API for developers for testing. \cite{ispeech}
 
 \textbf{Microsoft}\\
-Microsoft Speech API (SAPI) is an API developed by Microsoft and allows to use speech recognition and speech synthesis within windows applications. The SDK is integrated into the windows OS itself. Microsoft Office and Microsoft speech server are among the applications that use SAPI. The Speech API is distributed freely and can be shipped with any Windows applications that use speech technology. The recent version of the API is SAPI 5.\cite{microsoft}
+Microsoft Speech API (SAPI) is an API developed by Microsoft and allows to use speech recognition and speech synthesis within Windows applications. The SDK is integrated into the Windows OS itself. The Microsoft Office and Microsoft speech server are among the applications that use SAPI. The Speech API is distributed freely and can be shipped with any Windows applications that use speech technology. The recent version of the API is SAPI 5. \cite{microsoft}
 
 \textbf{Nuance}\\
-Nuance is an American company that develops speech technology solutions. Its speech technology powers the Apple Siri personal assistant.  Nuance speech technologies are available for embedded, mobile and cloud platforms. More than forty languages are supported by the services. The on-line service for developers is accessed through HTTP REST interface. The developer API is available freely for evaluation purposes. \cite{nuance}
+Nuance is an American company that develops speech technology solutions. Its speech technology powers the Apple Siri personal assistant.  Nuance speech technologies are available for embedded, mobile and cloud platforms. More than 40 languages are supported by the services. The on-line service for developers is accessed through HTTP REST interface. The developer API is available freely for evaluation purposes. \cite{nuance}
 
 \textbf{ReadSpeaker}\\
-Readspeaker is a suite of web-based applications that use TTS technology to enable speech in websites and mobile platforms. The application supports more than 35 languages. API for developers supports programming languages such as Java, Objective C, PHP, ASP and Flash. Free trial is available for evaluation. \cite{readspeaker}
+Readspeaker is a suite of web-based applications that use the TTS technology to enable speech on websites and mobile platforms. The application supports more than 35 languages. API for developers supports programming languages such as Java, Objective C, PHP, ASP and Flash. Free trial is available for evaluation. \cite{readspeaker}
 
-From the above speech synthesis systems two of them; i.e. Festival and Espeak are open-source and freely available for any uses including commercial. The voice quality of these systems doesn't necessarily match to those available from commercial companies. However these systems allow their applications to be installed on own server without restriction. This implies that these could be deployed even without need to an internet connection. The two systems have been selected for further use in the implementation phase.\\
+From the above speech synthesis systems, Festival and Espeak are open-source and freely available for any uses including commercial. The voice quality of these systems does not necessarily match with those available from commercial companies. However these systems allow their applications to be installed on one's own server without restriction. This implies that these could be deployed even without need to an Internet connection. The two systems have been selected for further use in the implementation phase.\\
 
 
 
 \begin{table}[h]
 
- \caption{Text to speech products}
+ \caption{Text-to-speech products}
     \begin{tabular}{ | l | l | }
     \hline
     \textbf{Product} & \textbf{Supported languages} \\ \hline
@@ -663,12 +664,13 @@ From the above speech synthesis systems two of them; i.e. Festival and Espeak ar
 
 \end{table}
 
+Text-to-speech products that support the Finnish language are summarized in Table 1.
+
 \section{Speech synthesis markup language}
-Speech Synthesis Markup Language (SSML) is an XML based markup language for speech synthesis applications. To drive interactive telephony service, it is often embedded in a VoiceXML scripts. However it may also be used alone for example in audio book creation. For assisting generation of synthetic speech in web and other applications, SSML provides rich markup language.The essential role of the markup language is to provide authors of synthesizable content a standard way to control aspects of speech such as pronunciation, volume, pitch, rate etc.  across different synthesis-capable platforms.\cite{w3}
-A text to speech system that supports SSML is responsible for rendering a document to spoken output and for using the information in the markup to render document as intended by the author. SSML document creation could be done by automatically, by a human author or both. SSML document processing is done in six steps. These are shown in Table 2.\\
+Speech Synthesis Markup Language (SSML) is an XML-based markup language for speech synthesis applications. To drive an interactive telephony service, it is often embedded in a VoiceXML scripts. However it may also be used alone for example in audio book creation. For assisting the generation of synthetic speech in web and other applications, SSML provides a rich markup language. The essential role of the markup language is to provide authors of synthesizable content with a standard way to control aspects of speech such as pronunciation, volume, pitch or/and rate across different synthesis-capable platforms. \cite{w3}
+ SSML document processing is done in six steps. These are shown in Table 2.\\
 
 \begin{table}[h]
-
  \caption{Steps in SSML document processing}
     \begin{tabular}{ | l | l | l | }
     \hline
@@ -678,10 +680,8 @@ A text to speech system that supports SSML is responsible for rendering a docume
     3 & Text normalization  & converting written to spoken form\\ \hline
     4 & Text to phoneme  &  words to the smallest unit of sound  \\ \hline
     5 & Prosody analysis  &   set of features of speech such as pitch and speaking rate\\ \hline
-    6 & Waveform production  & audio waveform generation  \\ \hline
-  
+    6 & Waveform production  & audio waveform generation  \\ \hline  
     \end{tabular}
-
 \end{table}
 
 %begin{itemize} 
@@ -712,45 +712,44 @@ A text to speech system that supports SSML is responsible for rendering a docume
 %"mark"
 %\end{itemize} 
 
-The following listing shows sample SSML
+The following listing shows a sample SSML.
 \begin{lstlisting} [caption = Sample SSML syntax]
 <speak xml:lang="en-US">
 <paragraph>this is a test</paragraph>
 <paragraph xml:lang="fi">tämä on testi</paragraph>
 </speak>
 \end{lstlisting}
+A text-to-speech system that supports SSML is responsible for rendering a document to the spoken output and for using the information in the markup to render the document as intended by the author. SSML document creation could be done automatically, by a human author or both.
 
 \section{Speech quality and evaluation}
-Intelligibility, naturalness and suitability can be used to evaluate the quality of a synthetic speech. In some applications like reading use for the blind, intelligibility at high rate of speed is more important. On the other hand in multimedia applications, naturalness and prosodic features are more important. Evaluation could be carried out at various levels such as phoneme, word or sentence level based on what kind of information is required.\cite{hut}
+Intelligibility, naturalness and suitability can be used to evaluate the quality of synthetic speech. In some applications like reading used for the blind, intelligibility at a high rate of speed is more important. On the other hand in multimedia applications, naturalness and prosodic features are more important. Evaluation could be carried out at various levels such as the phoneme, word or sentence level based on what kind of information is required. \cite{hut}
 
-Text processing and linguistic realization are important in a text to speech system just like the acoustic properties. For a good result different kinds of techniques should be used. Evaluation is often made by a subjective listening test with a response set of syllables, words, sentences. Usually consonants are more problematic to synthesize than vowels. Hence most test material is targeted to test consonants. Specially nasalized consonants such as (/m/ /n/ /ng/ ) are usually those which result in problems. 
+Text processing and linguistic realization are important in a text-to-speech system just like the acoustic properties. For a good result different kinds of techniques should be used. Evaluation is often made by a subjective listening test with a response set of syllables, words and sentences. Usually consonants are more problematic to synthesize than vowels. Hence most test material is targeted to test consonants. Especially nasalized consonants such as (/m/ /n/ /ng/ ) are usually those which result in problems. 
 %There are also some objective methods of testing like Articulation Index (AI) or Speech Transmission Index (STI).These methods may be used when a synthesized speech is through some transmission channel but not suitable to measure speech quality in general.
-When a test procedure is repeated for the same listening group, the test results may increase significantly. This is caused because after every listening session the testers get more familiarized with the synthesized speech and understand it better.  \cite{hut}
+When a test procedure is repeated for the same listening group, the test results may increase significantly. This is because after every listening session the testers get more familiar with the synthesized speech and understand it better. \cite{hut}
 
 %On the other side concentration problems may decrease the results especially in segmental methods. Hence using native or pro listeners is important in listening tests.\cite{hut}
  
 \clearpage
 \chapter{Current research in speech technologies}
 The future of speech technologies depends on the current research undertaken in the field and identifying the promising directions.
-Since 1990s advancements in computer software and hardware along with a better understanding of speech has allowed speech technologies to be deployed in enterprises. At the same time developments in the field of linguistics have led use of computers in the use of developing listening and speaking skills and second language acquisition. Some major language learning applications these days are using these technologies and new standards are being developed in this area.\cite{rob}
+Since the 1990s advancements in computer software and hardware along with a better understanding of speech has allowed speech technologies to be deployed in enterprises. At the same time developments in the field of linguistics have led the use of computers in the use of developing listening and speaking skills and second language acquisition. Some major language learning applications these days are using these technologies and new standards are being developed in this area. \cite{rob}
 
 \section{Visualization of speech}
-There has been tools to provide graphical representation of speech in computers since the 1990s. These are intended so that users could compare their pronunciation along with a native speaker of a language. However a little guidance was left to the user on how to improve pronunciation. Most language learning systems follow similar model in that learners first listen to a native speaker and then asked to produce their own.
+There have been tools to provide graphical representation of speech in computers since the 1990s. These were intended for users to compare their pronunciation along with a native speaker of a language. However a little guidance was left to the user on how to improve pronunciation. Most language learning systems follow a similar model in that learners first listen to a native speaker and are then asked to produce their own speech. \cite{rob}
 
-Waveform representation of speech is one way to provide feedback to the user. But in addition to this the feedback could also be audiovisual including representation of mouth parts. One of the issues in traditional approaches to visualization of speech is difficulty users may have in understanding or interpreting the feedback displays. Some speech software developers have experimented with game-like interfaces in which a user controls a game character based on his/her correct pronunciation. In some ways a computer based pronunciation practice is more efficient. These include, when there is a one to one access for students with computer, when users are allowed to proceed with their own pace and a computer program is customized to the need of the student.\cite{rob}\\
-
-Figure \vref{fig:viz} shows a program known as "Tell me more". This program implements a speech recognition in order to provide a score based on how close the user pronunciatimailon is relative to a native speaker's recording. In the program visual feedback is provided using audio waveforms and shows mouth parts used in the speech visualization.
+Waveform representation of speech is one way to provide feedback to the user. In addition to this the feedback could also be audiovisual including representation of mouth parts. One of the issues in traditional approaches to visualization of speech is the difficulty users may have in understanding or interpreting the feedback displays. Some speech software developers have experimented with game-like interfaces in which a user controls a game character based on his/her correct pronunciation. In some ways a computer-based pronunciation practice is more efficient. These include, when there is  one-to-one access for students with a computer, when users are allowed to proceed with their own pace and when a computer program is customized to the needs of the student. \cite{rob}\\
 
 \begin{figure}[h]
-
   \includegraphics[width=12cm]{viz}
-  \caption{Language learning application implementing visualization of speech (Copied from \cite{tellmemore}).}
+  \caption{Language learning application implementing visualization of speech. Copied from \cite{tellmemore}.}
   \label{fig:viz}
 \end{figure}
 
+Figure \vref{fig:viz} shows a program known as "Tell me more". This program implements speech recognition in order to provide a score based on how close the user pronunciation is relative to a native speaker's recording. In the program visual feedback is provided using audio waveforms and showing mouth parts used in the speech visualization.
 
 \section{Automatic speech recognition (ASR)}
-In the past decades, ASR has been an area of considerable interest in the signal processing and Human language technology (HLT) communities.\cite{baker} Despite the growing practical applications a significant development in ASR is expected in the future. It is expected to be world wide deployed. This could be expected due to the growth of technology in infrastructure, knowledge representation and increasingly advancing algorithms. Moore's law predicts that doubling amount of computations achievable for given cost in every 12 to 18 months as well as shrinking cost of memory. These developments has enabled researchers to run more complex algorithms in a short time. Increasing availability of speech corpora has led automated systems to achieve proficiency. For instance, various national institutions along with educational ones have provided research tools such as hidden Markov model toolkit (HTK), Sphinix etc.
+In the past decades, ASR has been an area of considerable interest in the signal processing and human language technology (HLT) communities. Despite the growing practical applications a significant development in ASR is expected in the future. It is expected to be worldwide deployed. This could be expected due to the growth of technology in infrastructure, knowledge representation and increasingly advancing algorithms. Moore's law predicts that the amount of computations achievable for given cost is doubled in every 12 to 18 months as well as the cost of memory shrinks. These developments have enabled researchers to run more complex algorithms in a short time. Increasing the availability of speech corpora has led automated systems to achieve proficiency. For instance, various national institutions along with educational ones have provided research tools such as Hidden Markov Model toolkit (HTK) and Sphinix. \cite{baker}
 
 %\begin{figure}[h]
 %  \centering
@@ -760,12 +759,14 @@ In the past decades, ASR has been an area of considerable interest in the signal
 %\end{figure}
 
 Audio indexing and mining have enabled high-performance automatic topic detection as well as applications for automatic speaker detection. Current ASR systems perform poorly when encountering audio signals that differ from the limited conditions under which they were developed.
-This focused research area would concentrate on creating and developing systems that would be more robust against variability and shifts in acoustic environments, such as environmental noise and various speaker conditions.\\
-The major change in speech analysis was the introduction of statistical methods like Hidden Markov Model (HMM), thirty years ago and still prevails. A number of new models have been introduced and expected in the future to come.
-Rapid portability to emerging languages is the other domain. Todays top ASR systems are not readily available for all languages and hence the goal in the future is in the direction that spoken language technologies are easily portable.
+This focused research area would concentrate on creating and developing systems that would be more robust against variability and shifts in acoustic environments, such as environmental noise and various speaker conditions. \cite{baker}
+
+A major change in speech analysis was the introduction of statistical methods like Hidden Markov Model (HMM), 30 years ago and still prevails. A number of new models have been introduced and expected in the future to come.
+Rapid portability to emerging languages is an other domain. Today's top ASR systems are not readily available for all languages and hence the goal in the future is in the direction that spoken language technologies are easily portable. \cite{baker}
 
 \section{Standards}
-Making of a software with speech technology has been difficult due to the fact that there has not been commonly accepted standards. However this has been changing recently because of efforts made by various sectors. W3C's (World Wide Web Consortium) effort to develop speech related standards can be a good example. Some interesting projects that use the web include SPICE from CMU whose main merit is to create an ASR for rare languages. These projects use the web and they are able to learn and improve through time. Increased use of multimedia such as videos together with speech technologies and incorporation of natural speech is becoming common. Virtual reality games have been increasingly using speech technologies and an increasing implementation of speech technologies in mobile technologies is expected to continue. Some of the institutions which are conducting research in speech technologies include the following.\\
+Integrating a speech technology to a software has been difficult due to the fact that there have not been commonly accepted standards. However this has been changing recently because of efforts made by various sectors. W3C's (World Wide Web Consortium) effort to develop speech-related standards can be a good example. Some interesting projects that use the web include SPICE from CMU whose main merit is to create an ASR for rare languages. These projects use the web and they are able to learn and improve through time. Increased use of multimedia such as videos together with speech technologies and incorporation of natural speech is becoming common. Virtual reality games have been increasingly using speech technologies and an increasing implementation of speech technologies in mobile technologies is expected to continue. \cite{rob}
+
 \begin{table}[h]
  \caption{Some institutions conducting research in speech technologies}
     \begin{tabular}{ | l | l | }
@@ -778,6 +779,8 @@ Making of a software with speech technology has been difficult due to the fact t
     AT\&T Natural Voices & http://www2.research.att.com/~ttsweb/'/demo.php\#top  \\ \hline
     \end{tabular}
 \end{table}
+
+Some of the institutions which are conducting research in speech technologies are shown in Table 3.
 
 \section{Emerging markets in mobile speech}
 There is a growing diverse market for mobile speech technologies. Mainly these new markets include Warehouse operations, offender monitoring and robotics. With the emergence of Siri, recent focus has been on personal assistants for smart phones. This has led the creation of competitors to Siri such as Nina (Nuance communication), Lola (SRI international), Lexee (Angel labs) and Watson for smart phones(IBM). \cite{markowitz}
@@ -799,7 +802,7 @@ Despite the extreme capabilities of robots in speech in various science fiction,
 \clearpage
 \chapter{Implementation}
 
-Many speech technology companies provide TTS solutions. From these there exist a number of natural sounding Finnish text to speech systems. Designing a new text to speech system from scratch is beyond the scope of this thesis. However some existing text to speech systems will be used in an experement to build a web based application  intended in assisting language learning. The main features of this application will be synthesizing user text into speech and using speech recognition for pronunciation practice. Text to speech engines will be installed on a server and the client side app communicates with the server using HTTP GET method. Overall the implementation plan is such that a user entered text is sent to the server first. Then after a speech is synthesized on the server the resulting audio is sent back to the client side.  Figure \vref{fig:clientserver} illustrates the client and server architecture.
+Many speech technology companies provide TTS solutions. From these there exist a number of natural sounding Finnish text-to-speech systems. Designing a new text-to-speech system from scratch is beyond the scope of this thesis. However some existing text-to-speech systems will be used in an experement to build a web based application  intended in assisting language learning. The main features of this application will be synthesizing user text into speech and using speech recognition for pronunciation practice. Text-to-speech engines will be installed on a server and the client side app communicates with the server using HTTP GET method. Overall the implementation plan is such that a user entered text is sent to the server first. Then after a speech is synthesized on the server the resulting audio is sent back to the client side.  Figure \vref{fig:clientserver} illustrates the client and server architecture.
 
 \begin{figure}[h]
   \includegraphics[width=12cm]{clientserver}
@@ -808,10 +811,10 @@ Many speech technology companies provide TTS solutions. From these there exist a
 \end{figure}
 
 
-\section{Setting up a Linux text to speech server }
+\section{Setting up a Linux text-to-speech server }
 In order to have a web interface to the speech engines installed, a server environment is set up. The server for this demo was Ubuntu 14.04 LTS and it was installed as a guest system into a virtual machine. A complete LAMP (Linux Apache MySQL and PHP) stack was installed in the server environment. On the server side PHP script accepts user text from browser and returns synthesized audio. On the other hand Jquery and Javascript were used for the client side web application. 
 
-Espeak and Festival text to speech systems were selected for the experement. Espeak supports various languages including Finnish. It can be easily installed to a Linux system from Linux repositories. Similarly Festival is found in the Ubuntu  package repositories. However Finnish voices for festival are not pre-installed along with festival and have to be downloaded separately. Finnish Festival voices have been developed in the University of Helsinki as part of Suopuhe project and are available in Ubuntu and Debian repositories. 
+Espeak and Festival text-to-speech systems were selected for the experement. Espeak supports various languages including Finnish. It can be easily installed to a Linux system from Linux repositories. Similarly Festival is found in the Ubuntu  package repositories. However Finnish voices for festival are not pre-installed along with festival and have to be downloaded separately. Finnish Festival voices have been developed in the University of Helsinki as part of Suopuhe project and are available in Ubuntu and Debian repositories. 
 
 
 \subsection{Espeak}
@@ -846,7 +849,7 @@ Espeak allows users to add or improve additional languages. This consists of def
 \end{figure}
 
 \subsection{Festival}
-Festival is a multilingual text to speech system developed originally by Alan W. Black at University of Edinburgh. Festival works in two modes. Command mode and text-to-speech mode. When in command mode input (from file or interactively ) is interpreted by the command interpreter. When in text-to-speech mode, input is treated as text to be rendered as speech.
+Festival is a multilingual text-to-speech system developed originally by Alan W. Black at University of Edinburgh. Festival works in two modes. Command mode and text-to-speech mode. When in command mode input (from file or interactively ) is interpreted by the command interpreter. When in text-to-speech mode, input is treated as text to be rendered as speech.
 Festival's basic calling method is like:\\
 \textbf{festival [options] file1 file2 ....}\\
 In command driven mode festival is started with no arguments.
@@ -891,7 +894,7 @@ The client side application has three main pages. The menu page has links to the
 \label{fig:menu}
 \end{figure}
 
-Read stories page is a place where user can hear to stories read aloud by text to speech engines. On this page a user could input his/her own text to the blank space and then listen a story. Sample text could also be fetched by the user for testing. Figure  \vref{fig:reading} shows the Read stories page.
+Read stories page is a place where user can hear to stories read aloud by text-to-speech engines. On this page a user could input his/her own text to the blank space and then listen a story. Sample text could also be fetched by the user for testing. Figure  \vref{fig:reading} shows the Read stories page.
 
 \begin{figure}[!ht]
 \includegraphics[width=7cm]{reading}
@@ -952,7 +955,7 @@ The Listen Dialogs has conversational phrases between two speakers. A set of dia
 \label{fig:dialogue}
 \end{figure}
 
-%Finally the Practice Pronunciation page provides sample phrases with a graphical waveform as spoken using text to speech engine. Users press the record button  and practice the words/phrases loudly. Users will be able to compare the waveform images of their pronunciation along with the speech engine. For this page it has been assumed that the speech engines pronunciation is closer to a native speaker than to a learner. Pronunciation page is shown in figure \vref{fig:pronunciation}.
+%Finally the Practice Pronunciation page provides sample phrases with a graphical waveform as spoken using text-to-speech engine. Users press the record button  and practice the words/phrases loudly. Users will be able to compare the waveform images of their pronunciation along with the speech engine. For this page it has been assumed that the speech engines pronunciation is closer to a native speaker than to a learner. Pronunciation page is shown in figure \vref{fig:pronunciation}.
 The practice pronunciation page features speech recognition that uses Google's technology as a back end. On this page a user could try a word with a speech synthesizer and at the same time practice pronunciation using a microphone as an input.
 \begin{figure}[h]
 \includegraphics[width=7cm]{pronunciation}
@@ -986,7 +989,7 @@ At the moment speech technologies are developing in a fast pace, specially in th
 
 There are quite many speech synthesis engines available on the market. Some products have been selected and compared. Then  two of them have been selected for further experiment. The main reason in the selection has been ease of availability for off-line use, being free of cost and open source. 
 
-Speech technologies have an important role in language learning. A small web application has been developed in order to demonstrate the application of speech synthesis for education. Hence in summary two text to speech applications, Espeak and Festival have been selected for use in a small web application intended in assisting language learning.
+Speech technologies have an important role in language learning. A small web application has been developed in order to demonstrate the application of speech synthesis for education. Hence in summary two text-to-speech applications, Espeak and Festival have been selected for use in a small web application intended in assisting language learning.
 
 \clearpage
 \chapter{Conclusions}
@@ -994,9 +997,9 @@ At the moment there exist many speech technology companies offering products for
 
 Basic methods of speech synthesis have been covered in chapter two. These include formant based, concatenative and articulatory synthesis. Concatenative method has gained more popularity because more natural sounding output could be produced. On the other hand formant based synthesis is known for its smaller memory footprint and flexibility. Hence it has been popular in embedded technologies. Articulatory synthesis technology is still in research phase due to its complexity.
 
-In this project a demo web application has been developed to illustrate the use of speech technologies in language education. This demo features two text to speech applications; Espeak and Festival. A user is able to use the application to read text aloud. It has been found that TTS technologies are important in such applications designed to assist language education.
+In this project a demo web application has been developed to illustrate the use of speech technologies in language education. This demo features two text-to-speech applications; Espeak and Festival. A user is able to use the application to read text aloud. It has been found that TTS technologies are important in such applications designed to assist language education.
 
-There exist many natural sounding text to speech technologies for many of the European languages. However speech technologies are not equally available in every language. Some experiments were carried out to use Oromo language, one of the languages in Ethiopia, to read a text using a Finnish speech synthesis technology. From the experiments the output sound was close enough to good. This may have been due to similar features in vowel length and consonant gemination between the languages. 
+There exist many natural sounding text-to-speech technologies for many of the European languages. However speech technologies are not equally available in every language. Some experiments were carried out to use Oromo language, one of the languages in Ethiopia, to read a text using a Finnish speech synthesis technology. From the experiments the output sound was close enough to good. This may have been due to similar features in vowel length and consonant gemination between the languages. 
 
 Many of modern speech technology products are complex that it is difficult task to port them among languages. This is specially true when the speech technology is based on a recording, such as unit selection speech synthesis system. Hence portability of speech technologies among languages remains a work for the future. 
 
@@ -1268,7 +1271,7 @@ Many of modern speech technology products are complex that it is difficult task 
 \chapter{List of websites for TTS companies}\label{appx:first}
 
 \begin{table}[htbp!]
- \caption{Text to speech products}
+ \caption{text-to-speech products}
     \begin{tabular}{ | l | l | l | }
     \hline
     \textbf{Product} & \textbf{URL}  \\ \hline

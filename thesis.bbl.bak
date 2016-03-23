@@ -1,0 +1,113 @@
+\begin{thebibliography}{10}
+
+\bibitem{wikibooks:latex}
+;.
+
+\bibitem{vocal}
+Measuring and modelling speech; 1998.
+\newblock Available from:
+  \url{http://www.haskins.yale.edu/featured/heads/mmsp/intro.html} [cited
+  2016-01-20].
+
+\bibitem{hut}
+Lemmetty S.
+\newblock Review of speech synthesis technology.
+\newblock Helsinki University of Technology. 1999;.
+
+\bibitem{rose2007plato}
+Rose D, Dalton B.
+\newblock Plato revisited: Learning through listening in the digital world.
+\newblock Recording for the Blind \& Dyslexic. 2007;.
+
+\bibitem{allen}
+Allen J, Hunnicutt MS, Klatt DH, Armstrong RC, Pisoni DB.
+\newblock From text to speech: The MITalk system.
+\newblock Cambridge University Press; 1987.
+
+\bibitem{burk}
+Burk P.
+\newblock Music and Computers: A Theoretical and Historical Approach: Course
+  Guide.
+\newblock Key College Pub.; 2005.
+
+\bibitem{espeak}
+Duddington J. eSpeak Text to Speech; 2008.
+\newblock Available from: \url{http://espeak. sourceforge. net}.
+
+\bibitem{chala}
+Chalamandaris A, Karabetsos S, Tsiakoulis P, Raptis S.
+\newblock A unit selection text-to-speech synthesis system optimized for use
+  with screen readers.
+\newblock Consumer Electronics, IEEE Transactions on. 2010;56(3):1890--1897.
+
+\bibitem{silen}
+Silen H, Helander E, Koppinen K, Gabbouj M.
+\newblock Building a Finnish unit selection TTS system.
+\newblock In: SSW; 2007. p. 310--315.
+
+\bibitem{jolanta}
+Bachan J.
+\newblock Efficient Diphone Database Creation for MBROLA, a Multilingual Speech
+  Synthesiser.
+\newblock Institute of Linguistics, Adam Mickiewicz University, XII
+  International PhD Workshop. 2010;.
+
+\bibitem{hubbard}
+Hubbard P.
+\newblock Computer Assisted Language Learning: Critical Concepts in
+  Linguistics. Present Trends and Future Directions in CALL.
+\newblock Routledge; 2009.
+
+\bibitem{kopka}
+Kimmo~Koskenniemi LCMVAAea Krister~Lindén.
+\newblock THE FINNISH LANGUAGE IN THE DIGITAL AGE.
+\newblock Georg Rehm, Hans Uszkoreit;.
+
+\bibitem{acapela}
+Acapela FAQ; 2015-10-09.
+\newblock Available from: \url{http://www.acapela-group.com/voices/faq/}.
+
+\bibitem{festival}
+The Festival Speech Synthesis System;.
+\newblock Available from: \url{http://www.cstr.ed.ac.uk/projects/festival/}.
+
+\bibitem{ispeech}
+iSpeech API;.
+\newblock Available from: \url{http://www.ispeech.org/api}.
+
+\bibitem{microsoft}
+Microsoft Speech Platform;.
+\newblock Available from:
+  \url{https://msdn.microsoft.com/en-us/library/jj127858.aspx}.
+
+\bibitem{nuance}
+Nuance, Text to speech;.
+\newblock Available from:
+  \url{http://research.nuance.com/category/text-to-speech/}.
+
+\bibitem{readspeaker}
+ReadSpeaker, About Us;.
+\newblock Available from: \url{http://www.readspeaker.com/about-us/}.
+
+\bibitem{w3}
+Mark R~Walker AH. Speech Synthesis Markup Language; 2001.
+\newblock Available from:
+  \url{http://w3.org/TR/2001/WD-speech-synthesis-20010103/}.
+
+\bibitem{rob}
+Godwin-Jones R.
+\newblock Emerging Technologies Speech Tools and Technologies.
+\newblock Virginia Commonwealth University. 2009;.
+
+\bibitem{tellmemore}
+Tell Me More Review;.
+\newblock Available from:
+  \url{http://www.effectivelanguagelearning.com/language-course-reviews/tell-me-more-review}.
+
+\bibitem{markowitz}
+Markowitz JA.
+\newblock Beyond SIRI: Exploring Spoken Language in Warehouse Operations,
+  Offender Monitoring and Robotics.
+\newblock Mobile Speech and Advanced Natural Language Solutions. 2013;.
+
+\end{thebibliography}

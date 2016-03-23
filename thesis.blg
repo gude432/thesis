@@ -1,0 +1,39 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: vancouver.bst
+Database file #1: biblio.bib
+Warning--empty author in vocal
+Warning--empty author and editor in vocal
+Warning--missing publisher in vocal
+You can't pop an empty literal stack for entry hut
+while executing---line 1865 of file vancouver.bst
+Warning--empty author and editor in espeak
+Warning--missing publisher in espeak
+Warning--empty author in acapela
+Warning--empty author and editor in acapela
+Warning--missing publisher in acapela
+Warning--empty author in festival
+Warning--empty author and editor in festival
+Warning--missing publisher in festival
+Warning--there's a month but no year in festival
+Warning--empty author in ispeech
+Warning--empty author and editor in ispeech
+Warning--missing publisher in ispeech
+Warning--empty author in microsoft
+Warning--empty author and editor in microsoft
+Warning--missing publisher in microsoft
+Warning--there's a month but no year in microsoft
+Warning--empty author in nuance
+Warning--empty author and editor in nuance
+Warning--missing publisher in nuance
+Warning--there's a month but no year in nuance
+Warning--empty author in readspeaker
+Warning--empty author and editor in readspeaker
+Warning--missing publisher in readspeaker
+Warning--there's a month but no year in readspeaker
+Warning--empty author and editor in w3
+Warning--missing publisher in w3
+Warning--empty author in tellmemore
+Warning--empty author and editor in tellmemore
+Warning--missing publisher in tellmemore
+Warning--there's a month but no year in tellmemore
+(There was 1 error message)

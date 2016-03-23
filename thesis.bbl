@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+
+\bibitem{vocal}
+Measuring and modelling speech; 1998.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from:
+  \url{http://www.haskins.yale.edu/featured/heads/mmsp/intro.html}.
+
+\bibitem{hut}
+Lemmetty S.
+\newblock Review of speech synthesis technology.
+\newblock Helsinki University of Technology. Espoo; 1999.
+\newblock Available from:
+  \url{http://research.spa.aalto.fi/publications/theses/lemmetty_mst/thesis.pdf}.
+
+\bibitem{rose2007plato}
+Rose D, Dalton B.
+\newblock Plato revisited: Learning through listening in the digital world.
+\newblock Recording for the Blind \& Dyslexic. 2007;[Online; accessed
+  21-01-2016].
+\newblock Available from:
+  \url{http://www.udlcenter.org/sites/udlcenter.org/files/Plato_Revisited.pdf}.
+
+\bibitem{allen}
+Allen J, Hunnicutt MS, Klatt DH, Armstrong RC, Pisoni DB.
+\newblock From text to speech: The MITalk system.
+\newblock Cambridge University Press; 1987.
+
+\bibitem{burk}
+Burk P.
+\newblock Music and Computers: A Theoretical and Historical Approach: Course
+  Guide.
+\newblock Key College Pub.; 2005.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from:
+  \url{http://music.columbia.edu/cmc/MusicAndComputers/}.
+
+\bibitem{espeak}
+Duddington J. eSpeak Text to Speech; 2008.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from: \url{http://espeak. sourceforge. net}.
+
+\bibitem{chala}
+Chalamandaris A, Karabetsos S, Tsiakoulis P, Raptis S.
+\newblock A unit selection text-to-speech synthesis system optimized for use
+  with screen readers.
+\newblock Consumer Electronics, IEEE Transactions on. 2010;56(3):1890--1897.
+
+\bibitem{silen}
+Silen H, Helander E, Koppinen K, Gabbouj M.
+\newblock Building a Finnish unit selection TTS system.
+\newblock In: SSW; 2007. p. 310--315.
+
+\bibitem{jolanta}
+Bachan J.
+\newblock Efficient Diphone Database Creation for MBROLA, a Multilingual Speech
+  Synthesiser.
+\newblock Institute of Linguistics, Adam Mickiewicz University, XII
+  International PhD Workshop. 2010;Available from:
+  \url{http://mechatronika.polsl.pl/owd/pdf2010/303.pdf}.
+
+\bibitem{hubbard}
+Hubbard P.
+\newblock Computer Assisted Language Learning: Critical Concepts in
+  Linguistics. Present Trends and Future Directions in CALL.
+\newblock Routledge; 2009.
+
+\bibitem{acapela}
+Acapela FAQ; 2015-10-09.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from: \url{http://www.acapela-group.com/voices/faq/}.
+
+\bibitem{festival}
+The Festival Speech Synthesis System;.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from: \url{http://www.cstr.ed.ac.uk/projects/festival/}.
+
+\bibitem{ispeech}
+iSpeech API; 2013.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from: \url{http://www.ispeech.org/api}.
+
+\bibitem{microsoft}
+Microsoft Speech Platform;.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from:
+  \url{https://msdn.microsoft.com/en-us/library/jj127858.aspx}.
+
+\bibitem{nuance}
+Nuance, Text to speech;.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from:
+  \url{http://research.nuance.com/category/text-to-speech/}.
+
+\bibitem{readspeaker}
+ReadSpeaker, About Us;.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from: \url{http://www.readspeaker.com/about-us/}.
+
+\bibitem{w3}
+Mark R~Walker AH. Speech Synthesis Markup Language; 2001.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from:
+  \url{http://w3.org/TR/2001/WD-speech-synthesis-20010103/}.
+
+\bibitem{rob}
+Godwin-Jones R.
+\newblock Emerging technologies: Speech tools and technologies.
+\newblock Language Learning \& Technology. 2009;13(3):4--11.
+
+\bibitem{tellmemore}
+Tell Me More Review;.
+\newblock [Online; accessed 21-01-2016].
+\newblock Available from:
+  \url{http://www.effectivelanguagelearning.com/language-course-reviews/tell-me-more-review}.
+
+\bibitem{baker}
+Baker J, Deng L, Glass J, Khudanpur S, Lee CH, Morgan N, et~al.
+\newblock Developments and directions in speech recognition and understanding,
+  Part 1 [DSP Education].
+\newblock Signal Processing Magazine, IEEE. 2009 May;26(3):75--80.
+
+\bibitem{markowitz}
+Markowitz J.
+\newblock Beyond SIRI: Exploring Spoken Language in Warehouse Operations,
+  Offender Monitoring and Robotics.
+\newblock In: Neustein A, Markowitz JA, editors. Mobile Speech and Advanced
+  Natural Language Solutions. Springer New York; 2013. p. 3--21.
+\newblock Available from: \url{http://dx.doi.org/10.1007/978-1-4614-6018-3_1}.
+
+\end{thebibliography}
