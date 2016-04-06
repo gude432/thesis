@@ -8,6 +8,8 @@ You can't pop an empty literal stack for entry hut
 while executing---line 1865 of file vancouver.bst
 Warning--empty author and editor in espeak
 Warning--missing publisher in espeak
+Warning--empty author and editor in wiki:speech-synthesis
+Warning--missing publisher in wiki:speech-synthesis
 Warning--empty author in acapela
 Warning--empty author and editor in acapela
 Warning--missing publisher in acapela
@@ -15,6 +17,8 @@ Warning--empty author in festival
 Warning--empty author and editor in festival
 Warning--missing publisher in festival
 Warning--there's a month but no year in festival
+Warning--empty author and editor in wiki:google-text-to-speech
+Warning--missing publisher in wiki:google-text-to-speech
 Warning--empty author in ispeech
 Warning--empty author and editor in ispeech
 Warning--missing publisher in ispeech

@@ -1,10 +1,11 @@
 % Encoding: UTF-8
 
 @Misc{acapela,
-  title = {Acapela FAQ},
-  year =  {2015-10-09},
-  note =  {[Online; accessed 21-01-2016]},
-  url =   { http://www.acapela-group.com/voices/faq/}
+  title =        {Acapela FAQ},
+  howpublished = {[Online]},
+  year =         {2015-10-09},
+  note =         {Accessed January 21 2016},
+  url =          { http://www.acapela-group.com/voices/faq/}
 }
 
 @Book{allen,
@@ -37,15 +38,15 @@
   url =       {http://music.columbia.edu/cmc/MusicAndComputers/}
 }
 
-@article{chala,
-  title={A unit selection text-to-speech synthesis system optimized for use with screen readers},
-  author={Chalamandaris, Aimilios and Karabetsos, Sotiris and Tsiakoulis, Pirros and Raptis, Spyros},
-  journal={Consumer Electronics, IEEE Transactions on},
-  volume={56},
-  number={3},
-  pages={1890-1897},
-  year={2010},
-  publisher={IEEE}
+@Article{chala,
+  author =    {Chalamandaris, Aimilios and Karabetsos, Sotiris and Tsiakoulis, Pirros and Raptis, Spyros},
+  title =     {A unit selection text-to-speech synthesis system optimized for use with screen readers},
+  journal =   {Consumer Electronics, IEEE},
+  year =      {2010},
+  volume =    {56},
+  number =    {3},
+  pages =     {1890-1897},
+  publisher = {IEEE}
 }
 
 @Misc{espeak,
@@ -144,8 +145,9 @@
   year =      {2009},
   volume =    {13},
   number =    {3},
-  pages =     {4--11},
-  publisher = {University of Hawaii National Foreign Language Resource Center. 1859 East-West Road\# 106, Honolulu, HI 96822}
+  pages =     {4-11},
+  publisher = {University of Hawaii National Foreign Language Resource Center. 1859 East-West Road\# 106, Honolulu, HI 96822},
+  url =       {http://llt.msu.edu/vol13num3/emerging.pdf}
 }
 
 @Article{rose2007plato,
@@ -153,7 +155,7 @@
   title =   {Plato revisited: Learning through listening in the digital world},
   journal = {Recording for the Blind \& Dyslexic},
   year =    {2007},
-  note =    {[Online; accessed 21-01-2016]},
+  note =    {Accessed 21 January 2016},
   url =     {http://www.udlcenter.org/sites/udlcenter.org/files/Plato_Revisited.pdf}
 }
 
@@ -172,11 +174,11 @@
   urldate = {2016-01-18}
 }
 
-@Misc{vocal,
-  title = {Measuring and modelling speech},
-  year =  {1998},
-  note =  {[Online; accessed 21-01-2016]},
-  url =   {http://www.haskins.yale.edu/featured/heads/mmsp/intro.html}
+@Electronic{vocal,
+  year =    {1998},
+  title =   {Measuring and modelling speech [Online]},
+  url =     {http://www.haskins.yale.edu/featured/heads/mmsp/intro.html},
+  urldate = {Accessed 21 January 2016}
 }
 
 @Misc{w3,
@@ -186,4 +188,18 @@
   note =    {[Online; accessed 21-01-2016]},
   url =     {http://w3.org/TR/2001/WD-speech-synthesis-20010103/},
   urldate = {2015-12-07}
+}
+
+@Misc{wiki:google-text-to-speech,
+  author = {Wikipedia},
+  title =  {Google Text-to-Speech --- Wikipedia{,} The Free Encyclopedia},
+  year =   {2016},
+  url =    {https://en.wikipedia.org/w/index.php?title=Google_Text-to-Speech&oldid=708853006}
+}
+
+@Misc{wiki:speech-synthesis,
+  author = {Wikipedia},
+  title =  {Speech synthesis --- Wikipedia{,} The Free Encyclopedia},
+  year =   {2016},
+  url =    {https://en.wikipedia.org/w/index.php?title=Speech_synthesis&oldid=713466924}
 }
